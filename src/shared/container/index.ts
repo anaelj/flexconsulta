@@ -1,10 +1,7 @@
 import { container } from 'tsyringe';
 
 import '@modules/users/providers';
-import '../container/providers/StorageProvider';
-import '../container/providers/MailTemplateProvider';
-import '../container/providers/MailProvider';
-import '../container/providers/CacheProvider';
+import './providers';
 
 import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
 import AppointmentsRepository from '@modules/appointments/infra/typeorm/repositories/AppointmentsRepository';
