@@ -17,6 +17,21 @@
      "experimentalDecorators": true,
      "emitDecoratorMetadata": true,
      "skipLibCheck": true,
-     "forceConsistentCasingInFileNames": true
-  }
+     "forceConsistentCasingInFileNames": true,
+  },
+  "exclude": [
+    "coverage",
+    "dist",
+    "docs",
+    "ormconfig.js",
+    "sorter.js",
+    "gulpfile.js",
+    "node_modules",
+    "jest.config.js",
+    "prettier.config.js",
+    "ormconfig.js",
+    "prettify.js",
+    "block-navigation.js"
+
+]
 }
