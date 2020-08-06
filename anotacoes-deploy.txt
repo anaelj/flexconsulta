@@ -1,0 +1,6 @@
+# instalar rimraf
+
+"engines": {
+    "node": "v12.17.0"
+  },
+  

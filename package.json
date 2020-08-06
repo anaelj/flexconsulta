@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "engines": {
-    "node": "v12.17.0"
-  },
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf dist && tsc",
     "dev:server": "ts-node-dev -r tsconfig-paths/register --inspect --transpileOnly --ignore-watch node_modules src/shared/infra/http/server.ts",
-    "start": "node dist/src/shared/infra/http/server.js",
+    "start": "node ./dist/shared/infra/http/server.js",
     "typeorm": "ts-node-dev -r tsconfig-paths/register  ./node_modules/typeorm/cli.js",
     "test": "jest",
     "clear_jest": "jest --clearCache"
+  },
+  "_moduleAliases": {
+    "@modules": "dist/modules",
+    "@config": "dist/config",
+    "@shared": "dist/shared"
   },
   "dependencies": {
     "@types/cors": "^2.8.6",
@@ -33,6 +35,7 @@
     "ioredis": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
     "mime": "^2.4.6",
+    "module-alias": "^2.2.2",
     "mongodb": "^3.5.9",
     "multer": "^1.4.2",
     "nodemailer": "^6.4.10",
@@ -61,6 +64,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.1.0",
     "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.1.3",
     "ts-node-dev": "^1.0.0-pre.49",
     "tsconfig-paths": "^3.9.0",
