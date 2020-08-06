@@ -11,7 +11,7 @@ module.exports =
             "dist/shared/infra/typeorm/migrations/*.js"
         ],
         "cli": {
-          "migrationsDir": "dist/shared/infra/typeorm/migrations"
+          "migrationsDir": "./dist/shared/infra/typeorm/migrations"
         }
     }
     ,
@@ -21,7 +21,7 @@ module.exports =
       "url" : process.env.URL_DATABASE_MONGO,
       "useUnifiedTopology": true,
       "entities": [
-          "dist/modules/**/infra/typeorm/schemas/*.js"
+          "./dist/modules/**/infra/typeorm/schemas/*.js"
       ]
     }
   ]
