@@ -21,7 +21,7 @@ module.exports =
       "url" : process.env.URL_DATABASE_MONGO,
       "useUnifiedTopology": true,
       "entities": [
-          "dist/src/modules/**/infra/typeorm/schemas/*.js"
+          "dist/modules/**/infra/typeorm/schemas/*.js"
       ]
     }
   ]
