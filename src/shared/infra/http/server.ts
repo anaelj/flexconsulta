@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import 'dotenv/config';
 import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
@@ -10,6 +9,8 @@ import '@shared/container';
 import uploadConfig from '@config/upload';
 import routes from './routes';
 import rateLimiter from './middlewares/rateLimiter';
+
+require('reflect-metadata');
 
 const app = express();
 
